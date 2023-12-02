@@ -38,7 +38,9 @@ def run_align_clustalomega(clustal_omega_executable: str,
     """
     # assert input
     if seqs is None and (seq1 is None or seq2 is None):
-        raise NotImplemented("Provide either List of seqs as `seqs` OR a pair of seqs as `seq1` and `seq2`.")
+        raise NotImplemented(
+            "Provide either List of seqs as `seqs` OR a pair of seqs as `seq1` and `seq2`."
+        )
 
     # generate seq_recs
     seq_rec = [None]
@@ -203,13 +205,6 @@ def cli():
     elif args.fasta is not None and (args.seqres is not None or args.atmseq is not None):
         parser.error("Provide either --fasta or both --seqres and --atmseq, not both.")
 
-    # use default clustal omega executable if not provided
-    if args.clustal_omega_executable is None:
-        args.clustal_omega_executable = shutil.which('clustalo')
-    # raise error if clustal omega executable not found
-    if args.clustal_omega_executable is None:
-        raise FileNotFoundError('clustal omega executable not found')
-    
     def _set_clustalo_path_by_os_type() -> None:
         """
         Set clustalo path based on OS type
