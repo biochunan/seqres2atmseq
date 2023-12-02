@@ -24,7 +24,10 @@ setup(
     package_data={
         'seqres2atmseq': [
             'assets/clustalo', 
-            'assets/clustalo-1.2.4-Ubuntu-x86_64'
+            'assets/clustalo-1.2.4-Ubuntu-x86_64',
+            'assets/clustaloMac',
+            'assets/clustal-omega-1.2.3-macosx',
+            
         ]
     },  
     entry_points={
@@ -35,5 +38,13 @@ setup(
     # Add other necessary information like author, URL, dependencies, etc.
     cmdclass={
         'install': PostInstallCommand,
-    }
+    },
+    author='ChuNan Liu',
+    author_email='chunan.liu@outlook.com',
+    description='Align PDB ATOM sequence (ATMSEQ) to SEQRES, and output a mask string mapping residues from SEQRES to ATMSEQ.',
+    # add dependency packages
+    install_requires=[
+        'loguru>=0.7.2',
+        'biopython>=1.01',
+    ],
 )
