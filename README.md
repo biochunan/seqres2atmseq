@@ -15,9 +15,7 @@ Align the SEQRES sequence with the ATMSEQ sequence of a protein chain and output
 ## Installation 
 If you are using a conda environment, you can install seqres2atmseq by:
 ```
-(base) $ git clone git@github.com:biochunan/seqres2atmseq.git
-(base) $ cd seqres2atmseq 
-(base) $ pip install . 
+(base) $ pip install git+https://github.com/biochunan/seqres2atmseq.git
 ```
 This will install a command-line tool `seqres2atmseq` in your conda environment.
 
