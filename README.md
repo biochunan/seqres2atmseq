@@ -15,14 +15,14 @@ Align the SEQRES sequence with the ATMSEQ sequence of a protein chain and output
 ## Installation 
 If you are using a conda environment, you can install seqres2atmseq by:
 ```
-(base) $ pip install git+https://github.com/biochunan/seqres2atmseq.git
+$ pip install git+https://github.com/biochunan/seqres2atmseq.git
 ```
 This will install a command-line tool `seqres2atmseq` in your conda environment.
 
 ## Usage
 Check help message:
 ```shell 
-(base) $ seqres2atmseq -h  # see below 
+$ seqres2atmseq -h  # see below 
 ```
 
 Help message:
@@ -54,7 +54,7 @@ Refer to [FASTA file format](#fasta-file-format) for the FASTA file format.
 
 ```shell
 # current directory: seqres2atmseq
-(base) $ seqres2atmseq -i test/test.fasta -o test/mask.json --verbose 
+$ seqres2atmseq -i test/test.fasta -o test/mask.json --verbose 
 ```
 - `-i`: input FASTA file path
 - `-o`: output file path
@@ -101,7 +101,7 @@ Refer to the example FASTA file `test/test.fasta` in the `test` directory.
 Run alignment and save the mask json file with SEQRES and ATMSEQ as input. 
 ```shell   
 # current directory: seqres2atmseq
-(base) $ seqres2atmseq \
+$ seqres2atmseq \
   -s \
   ADLQFSVLGPSGPILAMVGEDADLPCHLFPTMSAETMELKWVSSSLRQVVNVYADGKEVEDRQSAPYRGRTSILRDGITAGKAALRIHNVTASDSGKYLCYFQDGDFYEKALVELKVAALGSDLHVDVKGYKDGGIHLECRSTGWYPQPQIQWSNNKGENIPTVEAPVVADGVGLYAVAASVIMRGSSGEGVSCTIRSSLLGLEKTASISIADPFFRSAQ \
   -a \ 
